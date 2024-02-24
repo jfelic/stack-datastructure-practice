@@ -1,21 +1,21 @@
 public class Stack {
    private int maxSize; // size of stack array 
-   private int[] stackArray;
+   private char[] stackArray;
    private int top; // top of stack
 
    public Stack(int size) {
     maxSize = size; //set array size
-    stackArray = new int[size]; //create array
+    stackArray = new char[size]; //create array
     top = -1; //no items yet
    }
 
-   public void push(int item) {
+   public void push(char i) {
     top++; //increment top
-    stackArray[top] = item; //insert item in new empty element
+    stackArray[top] = i; //insert item in new empty element
    }
 
-   public int pop() {
-    int currentTop = stackArray[top]; //store current top value
+   public char pop() {
+    char currentTop = stackArray[top]; //store current top value
     top--; //decrement top
     return currentTop; //return old top to show what was popped
    }

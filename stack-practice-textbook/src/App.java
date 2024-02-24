@@ -1,14 +1,15 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        Stack myStack = new Stack(10);
+        Scanner scnr = new Scanner(System.in);
 
-        myStack.push(10);
-        myStack.push(20);
-        myStack.push(30);
+        System.out.println("Please enter a string: ");
+        String input = scnr.nextLine();
 
-        while( !myStack.isEmpty() ) {
-            int popped = myStack.pop();
-            System.out.println(popped);
-        }
+        Reverser reverse = new Reverser(input);
+
+        String reverseComplete = reverse.doReverse();
+        System.out.println(reverseComplete);
     }
 }
